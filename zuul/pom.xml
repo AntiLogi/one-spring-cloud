@@ -10,10 +10,10 @@
         <relativePath>../dependencies/pom.xml</relativePath>
     </parent>
 
-    <artifactId>web-admin-feign</artifactId>
+    <artifactId>zuul</artifactId>
     <packaging>jar</packaging>
 
-    <name>web-admin-feign</name>
+    <name>zuul</name>
     <inceptionYear>2019-Now</inceptionYear>
 
     <dependencies>
@@ -25,10 +25,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -48,21 +44,9 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
-        <!--hystrix 监控仪表盘-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
-        </dependency>
-
         <!-- Spring Cloud End -->
-
-        <!-- 解决 thymeleaf 模板引擎一定要执行严格的 html5 格式校验问题 -->
-        <dependency>
-            <groupId>net.sourceforge.nekohtml</groupId>
-            <artifactId>nekohtml</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
@@ -71,7 +55,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.ayyovei.web.admin.feign.WebAdminFeignApplication</mainClass>
+                    <mainClass>com.ayyovei.zuul.ZuulApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
