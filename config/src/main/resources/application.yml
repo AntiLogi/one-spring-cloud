@@ -9,7 +9,7 @@ spring:
           uri: https://github.com/AntiLogi/spring-clound-config
           search-paths: respo
           username: AntiLogi
-          password: xb23080822
+          password:
 
 server:
   port: 8888
